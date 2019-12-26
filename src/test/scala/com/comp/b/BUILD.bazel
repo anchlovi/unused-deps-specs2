@@ -1,0 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library",)
+
+scala_library(
+    name = "b",
+    srcs = ["Matchers.scala", "Person.scala"],
+    deps = [
+        "@io_bazel_rules_scala_org_specs2_specs2_common",
+        "@io_bazel_rules_scala_org_specs2_specs2_fp",
+        "@io_bazel_rules_scala_org_specs2_specs2_matcher",
+    ]
+)
